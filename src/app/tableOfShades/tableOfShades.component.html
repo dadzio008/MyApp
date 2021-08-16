@@ -1,0 +1,86 @@
+<title>Rolety</title>
+
+<section class="buttons">
+    <div class="container-fluid">
+        
+
+
+   <!-- DataTales Example -->
+   <div class="card shadow mb-4">
+       <div class="card-header py-3">
+           <h3 class="m-0 font-weight-bold text-primary" style="text-align: center;">Zarządzanie roletami</h3>
+       </div>
+       <div class="card-body">
+        <!-- <mat-list>
+            <mat-list-shade *ngFor="let shade of shades">{{shade.name}}
+              <mat-slider step="1" min="0" max="4" thumbLabel></mat-slider>
+            </mat-list-shade>
+          </mat-list> -->
+
+           <div class="table-responsive">
+               <table class="table action-panel table-bordered" id="dataTable" cellspacing="0">
+                   <thead>
+                   <tr>
+                       <th>Numer Rolety</th>
+                       <th>Nazwa Rolety</th>
+                       <th style="text-align: center;">Zasuwanie/Otwieranie</th>
+                       <th>Provider</th>
+                       <th>Usuń Roletę</th>
+                   </tr>
+                </thead>
+                   <tbody>                   
+                       <tr *ngFor="let shade of shades"> 
+                            <td>{{shade.id}}</td> 
+                           <td>{{ shade.name }}</td>
+                           <td>
+                             
+
+                                    
+    <mat-slider (click) = "move(shade.id1, shade.value)"
+    class="mat-slider"
+    [max]="max"
+    [min]="min"
+    step [displayWith]="formatStep"
+    thumbLabel [displayWith]="formatThumbLabel"
+    required [(ngModel)] ="shade.value"
+    value = "ngModel"
+    name = "value"
+>
+</mat-slider>
+
+<p>{{shade.value}}</p>
+    
+
+                            </td>                           
+                            <td>{{shade.provider}}</td>
+                            <td>
+                                <button (click) = "deleteShade(shade.id1)" class = "btn btn-danger">Usuń</button>
+                            </td>
+                       </tr>
+                       
+                       <thead>
+                           <tr>
+                               <!-- <th colspan="6" style="text-align: center;">
+                                   <button (click) = "closeShade" class="btn btn-success">Otwórz Wszystkie Rolety</button>
+                               </th>
+                               <th colspan="6" style="text-align: center;">
+                                <button (click) = "closeShade" class="btn btn-info">Zasuń Wszystkie Rolety</button>
+                            </th> -->
+                           </tr>
+                       </thead>
+                   </tbody>
+               </table>
+               
+           </div>
+           
+       </div>
+       
+    </div>
+    <div>
+        <img src="/assets/raspi.png" alt="img">
+       </div>
+   </div>
+   
+
+   
+   

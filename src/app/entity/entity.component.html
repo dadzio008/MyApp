@@ -1,0 +1,67 @@
+<title>Dodaj Roletę</title>
+<form (ngSubmit)="onSubmit()" #shadeForm="ngForm">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <div class="form-group row">
+                            <label class="col-6 col-ls-2 col-form-label">Numer Rolety</label>
+                            <div class="col-6 col-ls-2">
+                                <input type="text" [(ngModel)]="shade.id" 
+                            class="form-control" 
+                            id="id"                             
+                            name="id" 
+                            placeholder="Podaj Numer Rolety"
+                            reqired #id="ngModel" 
+                            >
+                            </div>   
+                            <label class="col-6 col-ls-2 col-form-label">Nazwa Rolety</label>
+                            <div class="col-6 col-ls-2">
+                                <input [(ngModel)]="shade.name" 
+                                class="form-control" 
+                                type="text" 
+                                id="name"
+                                name="name" 
+                                placeholder="Podaj Nazwę Rolety"
+                                reqired #name = "ngModel"
+                                >
+                            </div>
+                            <label class="col-6 col-ls-2 col-form-label">Numer Pinu Otwierania Rolety</label>
+                            <div class="col-6 col-ls-2">
+                                <input [(ngModel)]="shade.addressOpen"                             
+                                class="form-control"
+                                type="text" 
+                                id="address"
+                                name="address" 
+                                placeholder="Podaj Pin GPIO"
+                                reqired #name = "ngModel">
+                            </div>
+                            <label class="col-6 col-ls-2 col-form-label">Numer Pinu Zamykania Rolety</label>
+                            <div class="col-6 col-ls-2">
+                                <input [(ngModel)]="shade.addressClose"                             
+                                class="form-control"
+                                type="text" 
+                                id="address"
+                                name="address" 
+                                placeholder="Podaj Pin GPIO"
+                                reqired #name = "ngModel">
+                            </div>
+                            <label class="col-6 col-ls-2 col-form-label">Czas Potrzebny Do Otworzenia/Zamknięcia Rolety</label>
+                            <div class="col-6 col-ls-2">
+                                <input [(ngModel)]="shade.timeToOpenAndCloseShade"                             
+                                class="form-control"
+                                type="text" 
+                                id="address"
+                                name="address" 
+                                placeholder="Podaj Czas Otwarcia/Zamknięcia"
+                                reqired #name = "ngModel">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <input [disabled]="!shadeForm.form.valid" class="btn btn-success pull-left" type="submit" value="Wyślij" id="searchButton">
+    </div>
+</form>
