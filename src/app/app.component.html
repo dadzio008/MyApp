@@ -1,26 +1,32 @@
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark cyan" [containerInside]="false">
-    <mdb-navbar-brand><a class="navbar-brand" href="#">Panel Konfiguracyjny</a></mdb-navbar-brand>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-6" id="btn">
-            <a class="btn btn-danger" routerLink="/shades/allShades">Rolety</a>
-            </div>
-        
-        
-            <div class="col-xs-6" id="btn">
-                <a class="btn btn-success" routerLink="/shades/add">Dodaj roletę</a>
-            
-        </div>
-        </div>
-    </div>
+    <mdb-navbar-brand><a class="navbar-brand" 
+                        href="#">Panel Konfiguracyjny</a></mdb-navbar-brand>
+    
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+                    Rolety<span class="caret"></span></a>
+                    <div *dropdownMenu class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                        <a class="dropdown-item waves-light" mdbWavesEffect href="/shades/allShades">Wszystkie Rolety</a>
+                        <a class="dropdown-item waves-light" mdbWavesEffect href="/shades/add">Dodaj Roletę</a>                      
+                      <div class="divider dropdown-divider"></div>
+                      <a class="dropdown-item waves-light" mdbWavesEffect href="#">Separated link</a>
+                    </div>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link">
+                  <div class="btn-group" mdbDropdown>
+                    <mdb-icon fas icon="user" mdbDropdownToggle></mdb-icon>
+                <div class="dropdown-menu dropdown-menu-right dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="/login">Zaloguj Się</a>
+                </div>
+                  </div>
+                  </a>
+            </li>
+        </ul>
+    
 </mdb-navbar>
-
-
-
-
-
-
-
-
 
 <router-outlet></router-outlet>
