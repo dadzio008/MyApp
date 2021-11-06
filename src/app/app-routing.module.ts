@@ -9,12 +9,16 @@ import {MatSliderModule} from '@angular/material/slider';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule} from '@angular/common/http';
 import { FormBuilder, FormGroup, Validators ,NgForm } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './registration/register.component';
 
 
 
 const routes: Routes = [
   {path: 'shades/add', component: EntityComponent},
-  {path: 'shades/allShades', component: TableOfShadesComponent}
+  {path: 'shades/allShades', component: TableOfShadesComponent},
+  {path: 'login', component: LoginComponent},
+  {path: 'register', component: RegisterComponent}
 ];
 
 @NgModule({

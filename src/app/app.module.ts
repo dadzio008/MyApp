@@ -14,6 +14,8 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatInputModule} from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './registration/register.component';
 
 
 
@@ -21,6 +23,8 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
   declarations: [
     AppComponent,
     routingComponents,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     MDBBootstrapModule.forRoot(),

@@ -12,7 +12,7 @@ export class ShadeServiceService {
 
 
   constructor(private http: HttpClient) { 
-    this.shadesUrl = 'http://192.168.0.107:9090/shades/allShades'
+    this.shadesUrl = 'http://localhost:9090/shades/allShades'
   
   }
   public getAllShades():Observable<Shade[]>{
